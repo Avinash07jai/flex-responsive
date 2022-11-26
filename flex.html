@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+        }
+        .iteam1,.iteam2,.iteam3,.iteam4{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .iteam1 > div{
+            background-color: chocolate;
+            width: 49%;
+        }
+        .iteam2 > div{
+            background-color: chartreuse;
+            width: 100%;
+        }
+        .iteam3 > div{
+            background-color: blue;
+            width: 33%;
+        }
+        .iteam4 > div{
+            background-color: aqua;
+            width: 24%;
+        }
+        .iteam1 > div,.iteam2 > div,.iteam3 > div,.iteam4 > div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media screen and (max-width:768px) {
+            .iteam1 , 
+            .iteam3{
+                flex-direction: column;
+            }
+            .iteam1 > div , 
+            .iteam3 > div{
+                width: 100%;
+                margin-bottom: 5px;
+            }
+            .iteam4 {
+                flex-wrap: wrap;
+            }
+            .iteam4 > div{
+                width: 49%;
+                margin-bottom: 5px;
+            }
+        }
+        @media screen and (max-width:320px) {
+            .iteam4 {
+                flex-direction: column;
+            }
+            .iteam4 > div{
+                width: 100%;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="iteam1">
+            <div>1</div>
+            <div>2</div>
+        </div>
+        <div class="iteam2">
+            <div>3</div>
+        </div>
+        <div class="iteam3">
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+        <div class="iteam4">
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+
+        </div>
+    </div>
+</body>
+</html>
